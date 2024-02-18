@@ -4,8 +4,8 @@ interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ width, height, className = "" }: LogoProps) {
-  const style = { width, height, display: "inline-block" };
+export default function Logo({width, height, className = ''}: LogoProps) {
+  const style = {width, height, display: 'inline-block'};
   return (
     <div
       style={style}

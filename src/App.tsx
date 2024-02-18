@@ -1,15 +1,15 @@
-import React from "react";
-import { Button, CustomProvider, Container, Stack, Toggle } from "rsuite";
-import { Icon } from "@rsuite/icons";
-import { FaMoon, FaSun } from "react-icons/fa";
-import Logo from "./Logo";
-import "./App.css";
+import React from 'react';
+import {Button, CustomProvider, Container, Stack, Toggle} from 'rsuite';
+import {Icon} from '@rsuite/icons';
+import {FaMoon, FaSun} from 'react-icons/fa';
+import Logo from './Logo';
+import './App.css';
 
 function App() {
-  const [theme, setTheme] = React.useState<"light" | "dark">("dark");
+  const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
 
   const toggleTheme = (checked: boolean) => {
-    setTheme(checked ? "light" : "dark");
+    setTheme(checked ? 'light' : 'dark');
   };
 
   return (
@@ -22,9 +22,9 @@ function App() {
           </p>
 
           <Toggle
-            checked={theme === "light"}
-            checkedChildren={<Icon as={FaSun} style={{ fontSize: 16 }} />}
-            unCheckedChildren={<Icon as={FaMoon} style={{ fontSize: 16 }} />}
+            checked={theme === 'light'}
+            checkedChildren={<Icon as={FaSun} style={{fontSize: 16}} />}
+            unCheckedChildren={<Icon as={FaMoon} style={{fontSize: 16}} />}
             onChange={toggleTheme}
           />
 
