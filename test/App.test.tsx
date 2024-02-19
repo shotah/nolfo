@@ -5,6 +5,10 @@ import '@testing-library/jest-dom';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getAllByText(/learn react/i);
-  expect(linkElement[0]).toBeInTheDocument();
+  const container = screen.getByTestId('Container');
+  expect(container).toBeInTheDocument();
+  const content = screen.getByTestId('Content');
+  expect(content).toBeInTheDocument();
+  const stacks = screen.getAllByTestId('Stack');
+  expect(stacks).toHaveLength(2);
 });
