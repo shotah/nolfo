@@ -1,10 +1,11 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
-  testEnvironment: 'node',
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   roots: ['<rootDir>/test'],
   testMatch: ['**/*.test.ts', '**/*.test.tsx'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.ts?$': 'ts-jest',
+  moduleNameMapper: {
+    '\\.(scss|sass|css)$': 'identity-obj-proxy',
   },
   testTimeout: 15000,
 };

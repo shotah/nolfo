@@ -8,14 +8,10 @@
     "oldtest": "react-scripts test",
     "test": "jest --setupFiles dotenv/config --passWithNoTests",
     "test:watch": "jest --watch --detectOpenHandles --passWithNoTests",
-    "eject": "react-scripts eject",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint"
+    "fix": "gts fix"
   },
   "pre-commit": [
     "lint",
@@ -28,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@rsuite/icons": "^1.0.3",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
@@ -47,7 +44,6 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
@@ -69,5 +65,17 @@
     "react-scripts": {
       "typescript": "^5"
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
