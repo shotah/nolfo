@@ -1,0 +1,21 @@
+{
+  "aws.codeWhisperer.includeSuggestionsWithCodeReferences": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "files.eol": "\n",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "autoHide.autoHideSideBar": true,
+  "cSpell.words": ["nolfo", "oldtest", "posttest", "rsuite"]
+}
