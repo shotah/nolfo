@@ -1,17 +1,13 @@
 {
   "recommendations": [
-    "ms-vscode.vscode-typescript-tslint-plugin",
     "streetsidesoftware.code-spell-checker",
     "wix.vscode-import-cost",
     "eamodio.gitlens",
     "github.vscode-github-actions",
     "steoates.autoimport",
-    "hbenl.vscode-test-explorer",
     "formulahendry.code-runner",
-    "huntertran.auto-markdown-toc",
     "gruntfuggly.todo-tree",
-    "esbenp.prettier-vscode",
-    "orta.vscode-jest"
+    "esbenp.prettier-vscode"
   ],
   "unwantedRecommendations": [
     "ms-python.python",

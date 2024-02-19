@@ -1,4 +1,4 @@
-@import url("./Logo/Logo.css");
+@import url('./Logo/Logo.css');
 
 .App-header {
   min-height: 100vh;
@@ -11,5 +11,9 @@
 }
 
 .rs-theme-dark .App-header {
-  background-color: #282c34;
+  background-color: #ce9d33;
+}
+
+.rs-theme-light .App-header {
+  background-color: #e7c556;
 }
