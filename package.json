@@ -43,7 +43,7 @@
     "react-icons": "^5.0.1",
     "react-lazy-load": "^4.0.1",
     "react-scripts": "5.0.1",
-    "rsuite": "^5.53.2",
+    "rsuite": "^5.54.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
