@@ -3,11 +3,11 @@ import {CustomProvider, Content, Container, Stack} from 'rsuite';
 import CustomNavbar from './components/navbar';
 import CustomModal from './components/modal';
 import './App.css';
-import img1 from './assets/imgs/num_1.gif';
-import img2 from './assets/imgs/num_2.gif';
-import img3 from './assets/imgs/num_3.gif';
-import img4 from './assets/imgs/num_4.gif';
-import img5 from './assets/imgs/num_5.gif';
+import img1 from './assets/imgs/num_1.png';
+import img2 from './assets/imgs/num_2.png';
+import img3 from './assets/imgs/num_3.png';
+import img4 from './assets/imgs/num_4.png';
+import img5 from './assets/imgs/num_5.png';
 
 function App() {
   const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
