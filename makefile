@@ -1,5 +1,6 @@
-ifneq (,$(wildcard ./.env))
-	include .env
+.SILENT: # Disable echo of commands
+ifneq ("$(wildcard .env)","")
+    include .env
 endif
 
 SHELL := /bin/bash
@@ -82,3 +83,8 @@ docker-run-dev: docker-build
 		--name $(DOCKER_IMAGE_NAME) \
 		-v ./src,/usr/src/app/src \
 		$(DOCKER_IMAGE_NAME)
+
+
+.PHONY: docker-push
+docker-push:
+	docker push $(DOCKER_IMAGE_NAME)
