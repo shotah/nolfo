@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  basic_api:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app

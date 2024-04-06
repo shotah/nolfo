@@ -1,55 +1,98 @@
 import React from 'react';
-import {CustomProvider, Content, Container, Stack} from 'rsuite';
-import CustomNavbar from './components/navbar';
-import CustomModal from './components/modal';
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
-import img1 from './assets/imgs/num_1.gif';
-import img2 from './assets/imgs/num_2.gif';
-import img3 from './assets/imgs/num_3.gif';
-import img4 from './assets/imgs/num_4.gif';
-import img5 from './assets/imgs/num_5.gif';
+import Home from './pages';
+import HumanDog from './pages/human_dog';
+import Cat from './pages/cat';
+import Caged from './pages/caged';
+import Squirrel from './pages/squirrel';
+import Tuna from './pages/tuna';
 
 function App() {
   const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
   const [activeKey, setActiveKey] = React.useState(null);
   const toggleTheme = (checked: boolean) => {
+    console.log(checked);
     setTheme(checked ? 'light' : 'dark');
   };
+  console.log(theme);
+  React.useEffect(() => {
+    console.log(theme);
+    document.body.className = `rsuite-${theme}`;
+  }, [theme]);
+  React.useEffect(() => {
+    console.log(activeKey);
+  }, [activeKey]);
 
   return (
-    <CustomProvider theme={theme} disableRipple={false}>
-      <Container className="App" data-testid="Container">
-        <CustomNavbar
-          onSelect={setActiveKey}
-          activeKey={activeKey}
-          toggleTheme={toggleTheme}
-          theme={theme}
-        />
-        <Content className="App-header" data-testid="Content">
-          <Stack
-            spacing={10}
-            direction={'row-reverse'}
-            alignItems={'center'}
-            justifyContent={'space-around'}
-            data-testid="Stack"
-          >
-            <CustomModal image={img1} />
-            <CustomModal image={img2} />
-            <CustomModal image={img3} />
-          </Stack>
-          <Stack
-            spacing={10}
-            direction={'row-reverse'}
-            alignItems={'center'}
-            justifyContent={'space-around'}
-            data-testid="Stack"
-          >
-            <CustomModal image={img4} />
-            <CustomModal image={img5} />
-          </Stack>
-        </Content>
-      </Container>
-    </CustomProvider>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Home
+            theme={theme}
+            toggleTheme={toggleTheme}
+            activeKey={activeKey}
+            setActiveKey={setActiveKey}
+          />
+        }
+      />
+      <Route
+        path="/cat"
+        element={
+          <Cat
+            theme={theme}
+            toggleTheme={toggleTheme}
+            activeKey={activeKey}
+            setActiveKey={setActiveKey}
+          />
+        }
+      />
+      <Route
+        path="/squirrel"
+        element={
+          <Squirrel
+            theme={theme}
+            toggleTheme={toggleTheme}
+            activeKey={activeKey}
+            setActiveKey={setActiveKey}
+          />
+        }
+      />
+      <Route
+        path="/tuna"
+        element={
+          <Tuna
+            theme={theme}
+            toggleTheme={toggleTheme}
+            activeKey={activeKey}
+            setActiveKey={setActiveKey}
+          />
+        }
+      />
+      <Route
+        path="/caged"
+        element={
+          <Caged
+            theme={theme}
+            toggleTheme={toggleTheme}
+            activeKey={activeKey}
+            setActiveKey={setActiveKey}
+          />
+        }
+      />
+      <Route
+        path="/human_dog"
+        element={
+          <HumanDog
+            theme={theme}
+            toggleTheme={toggleTheme}
+            activeKey={activeKey}
+            setActiveKey={setActiveKey}
+          />
+        }
+      />
+    </Routes>
   );
 }
 
