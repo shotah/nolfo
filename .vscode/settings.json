@@ -28,7 +28,8 @@
     "posttest",
     "rcorners",
     "rsuite",
-    "testid"
+    "testid",
+    "webfonts"
   ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
