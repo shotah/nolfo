@@ -50,7 +50,7 @@ npm-upgrade:
 # DOCKER API #
 #####################
 
-DOCKER_IMAGE_NAME := "nolfo"
+DOCKER_IMAGE_NAME := "shotah/nolfo"
 # Deployment: Build the image with the deployment stage
 
 .PHONY: build-no-cache

@@ -1,29 +1,22 @@
-import React, {Dispatch, SetStateAction} from 'react';
-import {CustomProvider, Container} from 'rsuite';
-import CustomNavbar from '../components/navbar';
-import '../App.css';
+import React from 'react';
+import {CustomProvider, Container, Nav} from 'rsuite';
+import CustomNavbar, {NavLink} from '../components/navbar';
+import './index.css';
 
 import squirrel from '../assets/imgs/squirrel.png';
 
-function Squirrel(props: {
-  theme: 'light' | 'dark';
-  toggleTheme: (checked: boolean) => void;
-  activeKey: string | null;
-  setActiveKey: Dispatch<SetStateAction<null>>;
-}) {
-  const {setActiveKey, activeKey, toggleTheme, theme} = props;
+function Squirrel() {
   return (
     <CustomProvider>
       <Container className="App" data-testid="Container">
-        <CustomNavbar
-          onSelect={setActiveKey}
-          activeKey={activeKey}
-          toggleTheme={toggleTheme}
-          theme={theme}
-        />
-        <div className="home">
-          <img src={squirrel} alt="squirrel" width={500} height={500} />
-          <h1>This is a squirrel</h1>
+        <CustomNavbar />
+        <div className="squirrel">
+          <Nav className="center">
+            <Nav.Item as={NavLink} href="/">
+              <img src={squirrel} alt="squirrel" className="bigCorners" />
+            </Nav.Item>
+          </Nav>
+          <h1 style={{textAlign: 'center'}}>This is a squirrel</h1>
         </div>
       </Container>
     </CustomProvider>
