@@ -1,29 +1,22 @@
-import React, {Dispatch, SetStateAction} from 'react';
-import {CustomProvider, Container} from 'rsuite';
-import CustomNavbar from '../components/navbar';
+import React from 'react';
+import {CustomProvider, Container, Nav} from 'rsuite';
+import CustomNavbar, {NavLink} from '../components/navbar';
 import '../App.css';
 
 import tuna from '../assets/imgs/tuna.png';
 
-function Tuna(props: {
-  theme: 'light' | 'dark';
-  toggleTheme: (checked: boolean) => void;
-  activeKey: string | null;
-  setActiveKey: Dispatch<SetStateAction<null>>;
-}) {
-  const {setActiveKey, activeKey, toggleTheme, theme} = props;
+function Tuna() {
   return (
     <CustomProvider>
       <Container className="App" data-testid="Container">
-        <CustomNavbar
-          onSelect={setActiveKey}
-          activeKey={activeKey}
-          toggleTheme={toggleTheme}
-          theme={theme}
-        />
-        <div className="home">
-          <img src={tuna} alt="tuna" width={500} height={500} />
-          <h1>This is a tuna</h1>
+        <CustomNavbar />
+        <div className="tuna">
+          <Nav className="center">
+            <Nav.Item as={NavLink} href="/">
+              <img src={tuna} alt="tuna" className="bigCorners" />
+            </Nav.Item>
+          </Nav>
+          <h1 style={{textAlign: 'center'}}>This is tuna</h1>
         </div>
       </Container>
     </CustomProvider>
