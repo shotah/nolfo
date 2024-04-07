@@ -88,3 +88,10 @@ docker-run-dev: docker-build
 .PHONY: docker-push
 docker-push:
 	docker push $(DOCKER_IMAGE_NAME)
+
+
+# NOTES:
+# sudo docker remove nolfo
+# sudo docker pull shotah/nolfo
+# sudo docker run -d -p 443:3000 --name nolfo shotah/nolfo
+
