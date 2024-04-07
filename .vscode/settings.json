@@ -21,7 +21,15 @@
   "[tsx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["imgs", "nolfo", "oldtest", "posttest", "rsuite", "testid"],
+  "cSpell.words": [
+    "imgs",
+    "nolfo",
+    "oldtest",
+    "posttest",
+    "rcorners",
+    "rsuite",
+    "testid"
+  ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

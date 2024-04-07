@@ -1,33 +1,22 @@
-import React, {LegacyRef} from 'react';
+import React, {Ref} from 'react';
 import {Link} from 'react-router-dom';
-import {Toggle, Navbar, Nav} from 'rsuite';
-import {Icon} from '@rsuite/icons';
-import {FaMoon, FaSun} from 'react-icons/fa';
-
-type NavbarProps = {
-  onSelect: React.Dispatch<React.SetStateAction<null>>;
-  activeKey: string | null;
-  toggleTheme: (checked: boolean) => void;
-  theme: 'light' | 'dark';
-};
+import {Navbar, Nav} from 'rsuite';
 
 type NavLinkProps = {
-  href: any;
+  href: string;
   as: string;
 };
-const NavLink = React.forwardRef(
-  (props: NavLinkProps, ref: LegacyRef<HTMLAnchorElement> | undefined) => {
+export const NavLink = React.forwardRef(
+  (props: NavLinkProps, ref: Ref<HTMLAnchorElement> | undefined) => {
     const {href, ...rest} = props;
     return <Link to={href} {...rest} ref={ref}></Link>;
   }
 );
 
-export default function CustomNavbar(props: NavbarProps): JSX.Element {
-  const {onSelect, activeKey, toggleTheme, theme, ...rest} = props;
-
+export default function CustomNavbar(): JSX.Element {
   return (
-    <Navbar {...rest}>
-      <Nav onSelect={onSelect} activeKey={activeKey}>
+    <Navbar>
+      <Nav>
         <Nav.Item as={NavLink} href="/">
           Home
         </Nav.Item>
@@ -47,27 +36,6 @@ export default function CustomNavbar(props: NavbarProps): JSX.Element {
           Human Dog
         </Nav.Item>
       </Nav>
-      <Nav pullRight>
-        <Nav.Item>
-          <Toggle
-            checked={theme === 'light'}
-            checkedChildren={<Icon as={FaSun} style={{fontSize: 16}} />}
-            unCheckedChildren={<Icon as={FaMoon} style={{fontSize: 16}} />}
-            onChange={toggleTheme}
-            onClick={() => toggleTheme(theme === 'light' ? false : true)}
-          />
-        </Nav.Item>
-      </Nav>
     </Navbar>
   );
-}
-
-{
-  /* <Toggle
-checked={theme === 'light'}
-checkedChildren={<Icon as={FaSun} style={{fontSize: 16}} />}
-unCheckedChildren={<Icon as={FaMoon} style={{fontSize: 16}} />}
-onChange={toggleTheme}
-onClick={() => toggleTheme(theme === 'light' ? false : true)}
-/> */
 }

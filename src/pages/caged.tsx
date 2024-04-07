@@ -1,29 +1,22 @@
-import React, {Dispatch, SetStateAction} from 'react';
-import {CustomProvider, Container} from 'rsuite';
-import CustomNavbar from '../components/navbar';
-import '../App.css';
+import React from 'react';
+import {CustomProvider, Container, Nav} from 'rsuite';
+import CustomNavbar, {NavLink} from '../components/navbar';
+import './index.css';
 
 import caged from '../assets/imgs/caged.png';
 
-function Caged(props: {
-  theme: 'light' | 'dark';
-  toggleTheme: (checked: boolean) => void;
-  activeKey: string | null;
-  setActiveKey: Dispatch<SetStateAction<null>>;
-}) {
-  const {setActiveKey, activeKey, toggleTheme, theme} = props;
+function Caged() {
   return (
     <CustomProvider>
       <Container className="App" data-testid="Container">
-        <CustomNavbar
-          onSelect={setActiveKey}
-          activeKey={activeKey}
-          toggleTheme={toggleTheme}
-          theme={theme}
-        />
-        <div className="home">
-          <img src={caged} alt="caged" width={500} height={500} />
-          <h1>This is a caged</h1>
+        <CustomNavbar />
+        <div className="caged">
+          <Nav className="center">
+            <Nav.Item as={NavLink} href="/">
+              <img src={caged} alt="caged" className="bigCorners" />
+            </Nav.Item>
+          </Nav>
+          <h1 style={{textAlign: 'center'}}>This is a caged animal</h1>
         </div>
       </Container>
     </CustomProvider>
