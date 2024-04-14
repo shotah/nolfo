@@ -10,7 +10,7 @@ export default () => {
       <CustomNavbar />
       <Nav className="center">
         <Nav.Item as={NavLink} href="/">
-          <img src={cat} alt="cat" className="bigCorners" />
+          <img src={cat} alt="cat" className="bigCorners" loading="lazy" />
         </Nav.Item>
       </Nav>
       <h1 style={{textAlign: 'center'}}>This is a lone cat</h1>

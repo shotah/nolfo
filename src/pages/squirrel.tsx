@@ -11,7 +11,12 @@ export default () => {
 
       <Nav className="center">
         <Nav.Item as={NavLink} href="/">
-          <img src={squirrel} alt="squirrel" className="bigCorners" />
+          <img
+            src={squirrel}
+            alt="squirrel"
+            className="bigCorners"
+            loading="lazy"
+          />
         </Nav.Item>
       </Nav>
       <h1 style={{textAlign: 'center'}}>This is a squirrel</h1>

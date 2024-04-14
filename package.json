@@ -9,6 +9,7 @@
     "test": "jest --setupFiles dotenv/config --passWithNoTests",
     "test:watch": "jest --watch --detectOpenHandles --passWithNoTests",
     "lint": "gts lint",
+    "lint:gh": "npx eslint . --config .eslintrc.json --ext .js,.jsx,.ts,.tsx --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix"
@@ -50,6 +51,7 @@
     "typescript": "^5.4.4"
   },
   "devDependencies": {
+    "@microsoft/eslint-formatter-sarif": "^3.1.0",
     "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.5.0",
