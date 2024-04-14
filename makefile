@@ -28,6 +28,10 @@ lint:
 fix:
 	npm run fix
 
+.PHONY: gh-lint
+gh-lint:
+	npm run lint:gh
+
 # build
 .PHONY: build
 build:
