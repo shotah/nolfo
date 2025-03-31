@@ -28,7 +28,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@rsuite/icons": "^1.0.3",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^15.0.7",
+    "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.13.0",
